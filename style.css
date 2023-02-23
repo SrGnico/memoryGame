@@ -1,0 +1,273 @@
+@keyframes error{
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+@keyframes reveal {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-180deg); }
+    
+}
+
+@keyframes revealFront {
+    from { transform: rotateY(-180deg); }
+    to { transform: rotateY(0deg); }
+    
+}
+
+@keyframes aJugar {
+    0% { transform: translateY(0);}
+    99%{ transform: translateY(-100vh);}
+    100%{ height: 0; opacity: 0;}
+    
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(180deg, #000851 0%, #1CB5E0 100%);
+}
+
+.selector{
+    height: 100vh;
+    background: linear-gradient(180deg, #1CB5E0 0%, #000851 100%);
+    position: relative;
+}
+
+.selector[data-selected="true"]{
+    animation: aJugar forwards 0.3s;
+}
+
+.botones{
+    display: grid;
+    grid-template-areas: 
+    ". . c"
+    ". e f"
+    "g h .";
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    row-gap: 5px;
+    column-gap: 5px;
+    height: 610px;
+    width: 610px;
+    margin: auto;
+    top: 25%;
+    left: 35%;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    appearance: none;
+    border: 0.2rem solid #000000;
+    border-radius: 25px;
+    background-color: rgb(9, 31, 61);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.primero{
+    grid-area: g;
+}
+.segundo{
+    grid-area: h;
+}
+.tercero{
+    grid-area: e;
+}
+.cuarto{
+    grid-area: f;
+}
+.quinto{
+    grid-area: c;
+    color: wheat;
+    font-size: 90px;
+}
+
+.primero::after{
+    content: "4";
+    color: wheat;
+    font-size: 250px;
+    z-index: 10;
+    margin-left: 40%;
+}
+.segundo::after{
+    content: "8";
+    color: wheat;
+    font-size: 250px;
+    z-index: 10;
+    margin-left: 40%;
+}
+.tercero::after{
+    content: "16";
+    color: wheat;
+    font-size: 200px;
+    z-index: 10;
+    margin-left: 7%;
+}
+.cuarto::after{
+    content: "32";
+    color: wheat;
+    font-size: 200px;
+    z-index: 10;
+    margin-left: 7%;
+}
+
+.btn:hover{
+    background-color: rgb(16, 57, 114);
+}
+
+.btn:checked{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+label{
+    color: wheat;
+    z-index: 10;
+}
+
+.contenedor{
+    background: linear-gradient(180deg, #4b6cb7 0%, #182848 100%);
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:repeat(4, 1fr);
+    height: 100vh;
+}
+
+.carta{
+    height: 580px;
+    width: 480px;
+    border-radius: 10px;
+    border: 3px black solid;
+    margin: auto;
+    perspective: 1000px;
+    background-color: #e5e5f7;
+    background-image:  linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
+    background-position:  40px 0, 40px 0, 0 0, 0 0;
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    backface-visibility: hidden;
+    position: relative;  
+    cursor: pointer;
+}
+
+.frontCard{
+    position: absolute;    
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    border-radius: 10px;
+    border: 3px black solid;
+    
+}
+
+
+.carta[data-id="1"] > .frontCard{
+    background-color: #7CB9E8;
+
+}
+.carta[data-id="2"] > .frontCard{
+    background-color: #00308F;
+
+}
+.carta[data-id="3"] > .frontCard{
+    background-color:#F0F8FF;
+}
+.carta[data-id="4"] > .frontCard{
+    background-color:#00FFFF;
+    
+}
+.carta[data-id="5"] > .frontCard{
+    background-color: #7FFFD4;
+
+}
+.carta[data-id="6"] > .frontCard{
+    background-color:#375369;
+}
+.carta[data-id="7"] > .frontCard{
+    background-color:#17222e;
+
+}
+.carta[data-id="8"] > .frontCard{
+    background-color:#007FFF;
+
+}
+.carta[data-id="9"] > .frontCard{
+    background-color:#2697cc;
+    
+
+}
+.carta[data-id="10"] > .frontCard{
+    background-color:#0066b2;
+    
+
+}
+.carta[data-id="11"] > .frontCard{
+    background-color:#0000FF;
+
+}
+.carta[data-id="12"] > .frontCard{
+    background-color:#318CE7;
+
+}
+.carta[data-id="13"] > .frontCard{
+    background-color:#428aff;
+    
+}
+.carta[data-id="14"] > .frontCard{
+    background-color: #002850;
+    
+    
+}
+.carta[data-id="15"] > .frontCard{
+    background-color:#0039a6;
+
+}
+.carta[data-id="16"] > .frontCard{
+    background-color:#13274F;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.carta[data-x="true"]{
+    animation: revealFront forwards 0.5s;
+}
+
+.carta[data-x="true"] > .frontCard{
+    animation: reveal forwards 0.5s;
+}
+
+
+
+.carta[data-flipped="true"]{
+    animation: reveal forwards 0.5s;
+
+}
+
+.carta[data-flipped="true"] > .frontCard{
+    animation: revealFront forwards 0.5s;
+}

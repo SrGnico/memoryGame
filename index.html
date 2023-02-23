@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="selector" data-selected="false">
+      <div class="contenedorBtn">
+        <div class="botones">
+          <input
+            data-valor="4"
+            class="btn primero"
+            type="radio"
+            id="4"
+            name="cantidad"
+            value="4"
+          />
+
+          <input
+            data-valor="8"
+            class="btn segundo"
+            type="radio"
+            id="8"
+            name="cantidad"
+            value="8"
+            checked
+          />
+
+          <input
+            data-valor="16"
+            class="btn tercero"
+            type="radio"
+            id="16"
+            name="cantidad"
+            value="16"
+          />
+
+          <input
+            data-valor="32"
+            class="btn cuarto"
+            type="radio"
+            id="32"
+            name="cantidad"
+            value="32"
+          />
+          <button class="btn quinto" id="btn" type="submit">Play</button>
+        </div>
+      </div>
+    </form>
+    <div class="contenedor">
+      <!--<div
+        class="carta"
+        data-flipped="false"
+        data-discovered="false"
+        data-id="1"
+        data-x="false"
+        onclick="flipCard(this)"
+      >
+        <div class="frontCard"></div>
+      </div>-->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
