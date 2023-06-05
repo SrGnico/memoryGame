@@ -112,7 +112,6 @@ const crearCartas = (ev) =>{
             contenedor.style.gridTemplateColumns = "repeat(8, 1fr)";
 
          for( let i = 0; i < size.length; i++){
-            size[i].style.width = "280px";
             size[i].dataset.id = ids[i] ;
         }
             break;
