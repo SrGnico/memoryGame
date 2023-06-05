@@ -65,13 +65,7 @@ body{
     transform: rotate(45deg);
 }
 
-@media (max-width:1024px){
-    .botones{
-        transform: rotate(0);
-        scale: 0.5;
-    }
 
-}
 
 .btn{
     height: 100%;
@@ -158,8 +152,8 @@ label{
 }
 
 .carta{
-    height: 250px;
-    width: 250px;
+    height: 60svh;
+    width: 20svw;
     border-radius: 10px;
     border: 3px black solid;
     margin: auto;
@@ -186,6 +180,16 @@ label{
     border-radius: 10px;
     border: 3px black solid;
     
+}
+
+@media (max-width:1024px){
+    .botones{
+        transform: rotate(0);
+        scale: 0.5;
+    }
+    .contenedor{
+    }
+
 }
 
 

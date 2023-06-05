@@ -102,6 +102,7 @@ const crearCartas = (ev) =>{
             ids = ocho;
             shuffleIds();
             for( let i = 0; i < size.length; i++){
+                size[i].style.height = "40svh";
                 size[i].dataset.id = ids[i] ;
             }
             break;
@@ -112,6 +113,8 @@ const crearCartas = (ev) =>{
             contenedor.style.gridTemplateColumns = "repeat(8, 1fr)";
 
          for( let i = 0; i < size.length; i++){
+            size[i].style.width = "12svw";
+            size[i].style.height = "48svh";
             size[i].dataset.id = ids[i] ;
         }
             break;
@@ -123,8 +126,8 @@ const crearCartas = (ev) =>{
             contenedor.style.gridTemplateRows = "repeat(4, 1fr)";
 
             for( let i = 0; i < size.length; i++){
-                size[i].style.width = "280px";
-                size[i].style.height = "280px";
+                size[i].style.width = "12svw";
+                size[i].style.height = "24svh";
                 size[i].dataset.id = ids[i] ;
         }
             break;
